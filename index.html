@@ -6,9 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Webpack 4 Starter</title>
 <link href="style.css" rel="stylesheet"></head>
-<body>
+<body class="main-body">
 <div class="main-wrapper">
-  <div class="left-menu mobile_hidden">
+  <div class="call">
+      <div class="call__header">
+        <div class="call-buttons">
+          <button class="call-buttons__close-button"></button>
+        </div>
+      </div>
+      <div class="call__title-block">
+        <div class="call-title-block__title">Заказать звонок</div>
+      </div>
+      <div class="call__form-wrapper">
+        <div class="call-form">
+          <form action="https://echo.htmlacademy.ru/courses" method="post">
+            <input class="call-form__input" type="tel" name="username" placeholder="Телефон">
+          </form>
+        </div>
+        <div class="call-form__personal-data">
+          Нажимая “отправить”, вы даете согласие на <a class="call-link" href="#">обработку персональных данных</a> и
+          соглашаетесь с нашей <a class="call-link" href="#">политикой конфиденциальности</a>
+        </div>
+        <button class="call-form__submit-button" type="submit"><span class="call-form__submit-text">отправить</span></button>
+      </div>
+  </div>
+  <div class="left-menu">
     <aside class="sidemenu">
       <div class="sidemenu__wrapper">
         <header class="sidemenu-header">
@@ -59,6 +81,7 @@
       </div>
     </aside>
   </div>
+
   <div class="main-content">
     <div class="body-index">
     <div class="container">
@@ -102,10 +125,10 @@
           </div>
           <div class="navigation">
             <nav class="navigation__box">
-              <a href="#" class="navigation__link mobile_hidden">Ремонтируемые бренды</a>
-              <a href="#" class="navigation__link active">Ремонтируемые устройства</a>
+              <a href="#brands" class="navigation__link mobile_hidden">Ремонтируемые бренды</a>
+              <a href="#tech" class="navigation__link active">Ремонтируемые устройства</a>
               <a href="#" class="navigation__link desktop_hidden"><span class="q">Дополнительные услуги</span></a>
-              <a href="#" class="navigation__link hidden">Цены на услуги</a>
+              <a href="#price" class="navigation__link hidden">Цены на услуги</a>
               <a href="#" class="navigation__link mobile_hidden">Адреса сервисных центров</a>
               <a href="#" class="navigation__link hidden">Специальные цены</a>
               <a href="#" class="navigation__link mobile_hidden">Отзывы</a>
@@ -134,7 +157,7 @@
       </main>
       </div>
     </div>
-    <div class="body-brands">
+    <div class="body-brands" id="brands">
       <div class="container-brands">
         <div class="header-brands">
           <h1 class="h1-brands">Ремонт техники различных брендов</h1>
@@ -226,7 +249,7 @@
         </div>
       </div>
       </div>
-    <div class="body-technics">
+    <div class="body-technics" id="tech">
       <div class="container-technics">
         <div class="header-technics">
           <h1 class="h1-technics">Ремонт различных видов техники</h1>
@@ -271,7 +294,7 @@
         </div>
       </div>
     </div>
-    <div class="body-service">
+    <div class="body-service" id="price">
     <div class="container-service">
       <div class="header-service">
         <h1 class="h1-service">Цены на услуги</h1>
@@ -336,7 +359,8 @@
     </div>
     </div>
   </div>
-  <div class="feedback feedback--hidden">
+
+  <div class="feedback">
     <div class="feedback__header">
       <div class="feedback-buttons">
         <button class="feedback-buttons__close-button"></button>
@@ -365,32 +389,7 @@
 
 
   </div>
-  <div class="call call--hidden">
-    <div class="call__header">
-      <div class="call-buttons">
-        <button class="call-buttons__close-button"></button>
-      </div>
-    </div>
 
-    <div class="call__title-block">
-      <div class="call-title-block__title">Заказать звонок</div>
-    </div>
-
-    <div class="call__form-wrapper">
-      <div class="call-form">
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
-          <input class="call-form__input" type="tel" name="username" placeholder="Телефон">
-        </form>
-      </div>
-      <div class="call-form__personal-data">
-        Нажимая “отправить”, вы даете согласие на <a class="call-link" href="#">обработку персональных данных</a> и
-        соглашаетесь с нашей <a class="call-link" href="#">политикой конфиденциальности</a>
-      </div>
-      <button class="call-form__submit-button" type="submit"><span class="call-form__submit-text">отправить</span></button>
-    </div>
-
-
-  </div>
 </div>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>

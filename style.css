@@ -6,10 +6,20 @@
      */
 }
 
+.main-blur {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.body-scroll{
+  overflow: hidden;
+}
+
 .left-menu {
   position: relative;
   top: 0;
   left:0;
+  opacity: 1;
 }
 
 .main-wrapper{
@@ -17,6 +27,7 @@
   display:flex;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .container {
@@ -375,15 +386,6 @@ a {
   left:0;
   box-shadow: 40px 0 40px -30px rgba(0, 0, 0, 0.3);
 }
-.tablet-opacity {
-  opacity: 0.3;
-}
-
-.sidemenu-opacity{
-  opacity: 0;
-}
-
-
 
 @media (min-width: 321px) {
   .main-wrapper {
@@ -395,7 +397,7 @@ a {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
   .main-wrapper {
     width: 768px;
@@ -450,9 +452,6 @@ a {
         border-radius: 6px;
     }
 
-  .tablet-opacity {
-    opacity: 0.3;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -526,9 +525,6 @@ a {
         border-radius: 6px;
     }
 
-  .sidemenu-opacity{
-    opacity: 0.3;
-  }
 }
 
 
@@ -1957,27 +1953,34 @@ a:hover, button:hover {
 }
 
 .sidemenu {
-    font-family: "TT Lakes", serif;
-    /*position: absolute;
-    top:0;
-    left:0;
+  font-family: "TT Lakes", serif;
+  width: 320px;
+  background: white;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  height: 100%;
+  z-index: 3000;
+}
 
-     */
-    width: 320px;
-   background: white;
-    /*box-shadow: 40px 0 40px -30px rgba(0, 0, 0, 0.3);
-
-     */
-    box-sizing: border-box;
+.sidemenu-hidden {
+  transform: translateX(1000px);
+  transition-duration: 0.5s;
+  background: white;
+  z-index: 3000;
 }
 
 .sidemenu__wrapper {
-    width: 85%;
-    margin: 0 auto;
+  background: white;
+  height: 100%;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .sidemenu-header {
-    display: flex;
+  display: flex;
+  background: white;
 }
 
 .sidemenu-header__lt-left {
@@ -2028,7 +2031,8 @@ button {
 }
 
 .menu {
-    height: 450px;
+  height: 450px;
+  background: white;
 }
 
 .menu__lt {
@@ -2065,6 +2069,10 @@ button {
     border: 2px solid #41F6D7;
     transform: rotate(90deg);
     border-radius: 7px 7px 0 0;
+}
+
+.sidemenu-footer{
+  background: white;
 }
 
 .sidemenu-footer__buttons {
@@ -2128,23 +2136,30 @@ button {
   .menu{
     height: 680px;
   }
+  .sidemenu {
+    position: relative;
+    top:0;
+    left:0;
+  }
 }
 
 
 
 .feedback{
     width: 320px;
+  height: 100%;
     margin:0;
     padding:0;
     background: white;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -2000px;
     z-index:100;
 }
 
 .feedback--hidden{
-  display: none;
+  transform: translateX(-2000px);
+  transition-duration: 0.3s;
 }
 
 button{
@@ -2279,17 +2294,26 @@ button{
 
 .call{
     width: 320px;
+    height: 100%;
     margin:0;
     padding:0;
     background: white;
     position: absolute;
     top: 0;
-    right: 0;
-    z-index:100;
+    right: -2000px;
+    z-index:102;
 }
 
+/*.call-body {
+  background: rgba(255, 255, 255, 0.5);
+
+}
+
+ */
+
 .call--hidden{
-  display: none;
+  transform: translateX(-2000px);
+  transition-duration: 0.3s;
 }
 
 button{
@@ -2391,6 +2415,24 @@ button{
     background: url(./static/order_arrow.png) no-repeat;
 }
 
+/*@media (min-width: 768px) {
+  .call-body {
+    width: 768px;
+    height: 100%;
+  }
+
+  .call{
+    width: 440px;
+    transform: translateX(320px);
+  }
+
+  .call-form__submit-button {
+    margin-left: 300px;
+  }
+}
+
+ */
+
 @media (min-width: 1440px) {
     .call{
         width: 440px;
@@ -2415,9 +2457,6 @@ button{
   font-style: italic; }
 
 body {
-  /*padding: 1rem;
-
-   */
   margin: 0;
   font-family: Comic, sans-serif;
   /*background-color: $bgColor;
