@@ -10,10 +10,12 @@
   pointer-events: none;
   opacity: 0.5;
 }
-
+/*
 .body-scroll{
   overflow: hidden;
 }
+
+ */
 
 .left-menu {
   position: relative;
