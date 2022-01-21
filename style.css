@@ -17,6 +17,10 @@
 
  */
 
+.modal-hidden{
+  display: none
+}
+
 .left-menu {
   position: relative;
   top: 0;
@@ -29,7 +33,7 @@
   display:flex;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+
 }
 
 .container {
@@ -265,6 +269,10 @@ a {
     display: none;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .navigation__link {
     display: flex;
     position: relative;
@@ -317,6 +325,7 @@ a {
     top: 0;
     right: 0;
     background: url(./static/fade.png);
+    border: 1px solid red;
 
 
 }
@@ -524,6 +533,7 @@ a {
         height: 307px;
         border-radius: 6px;
     }
+
 
 }
 
@@ -2162,6 +2172,7 @@ button {
   transition-duration: 0.3s;
 }
 
+
 button{
     cursor: pointer;
 }
@@ -2316,6 +2327,7 @@ button{
   transition-duration: 0.3s;
 }
 
+
 button{
     cursor: pointer;
 }
@@ -2458,8 +2470,8 @@ button{
 
 body {
   /*padding-top: 1rem;
-
    */
+  padding: 0;
   margin: 0;
   font-family: Comic, sans-serif;
   /*background-color: $bgColor;
