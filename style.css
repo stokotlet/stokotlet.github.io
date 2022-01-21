@@ -464,8 +464,6 @@ a {
         height: 535px;
     }
 
-
-
     .header {
         display: none;
     }
@@ -2147,7 +2145,7 @@ button {
 
 .feedback{
     width: 320px;
-  height: 100%;
+    height: 100%;
     margin:0;
     padding:0;
     background: white;
