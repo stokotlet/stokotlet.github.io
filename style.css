@@ -1959,13 +1959,13 @@ a:hover, button:hover {
   box-sizing: border-box;
   position: absolute;
   top: 0;
-  left: -1000px;
+  left: -2000px;
   height: 100%;
   z-index: 3000;
 }
 
 .sidemenu-hidden {
-  transform: translateX(1000px);
+  transform: translateX(2000px);
   transition-duration: 0.5s;
   background: white;
   z-index: 3000;
@@ -2457,6 +2457,9 @@ button{
   font-style: italic; }
 
 body {
+  /*padding-top: 1rem;
+
+   */
   margin: 0;
   font-family: Comic, sans-serif;
   /*background-color: $bgColor;
