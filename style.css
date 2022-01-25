@@ -33,6 +33,7 @@
   display:flex;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 
 }
 
@@ -398,7 +399,7 @@ body::-webkit-scrollbar {
   box-shadow: 40px 0 40px -30px rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 321px) {
+@media (min-width: 1px) {
   .main-wrapper {
     width: 320px;
   }
@@ -1969,13 +1970,15 @@ a:hover, button:hover {
   box-sizing: border-box;
   position: absolute;
   top: 0;
-  left: -2000px;
+  /*left: -2000px;
+   */
+  left: 0;
   height: 100%;
   z-index: 3000;
 }
 
 .sidemenu-hidden {
-  transform: translateX(2000px);
+  transform: translateX(-2000px);
   transition-duration: 0.5s;
   background: white;
   z-index: 3000;
@@ -2151,6 +2154,7 @@ button {
     top:0;
     left:0;
   }
+
 }
 
 
@@ -2163,13 +2167,14 @@ button {
     background: white;
     position: absolute;
     top: 0;
-    right: -2000px;
+    right: 0;
     z-index:100;
 }
 
 .feedback--hidden{
-  transform: translateX(-2000px);
+  transform: translateX(2000px);
   transition-duration: 0.3s;
+
 }
 
 
@@ -2311,7 +2316,7 @@ button{
     background: white;
     position: absolute;
     top: 0;
-    right: -2000px;
+    right: 0;
     z-index:102;
 }
 
@@ -2323,7 +2328,7 @@ button{
  */
 
 .call--hidden{
-  transform: translateX(-2000px);
+  transform: translateX(2000px);
   transition-duration: 0.3s;
 }
 
